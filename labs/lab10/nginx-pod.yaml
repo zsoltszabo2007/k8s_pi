@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod  # this is the object to be created by k8s
+metadata:
+  name: nginx    # name of our pod
+  labels:
+     one: is-the-loneliest-number    # this is a label key:value
+     two: two-is-progress 
+spec:
+  containers:
+  - name: nginx  # name of a container
+    image: arm32v7/nginx # name and version of image to use
+    ports:
+    - containerPort: 80
