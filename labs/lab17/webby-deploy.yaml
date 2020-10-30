@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: webservice
+   labels:
+     app: webby
+spec:
+  selector:
+    matchLabels:
+      app: webby
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: webby
+    spec:
+      containers:
+      - name: webby
+        image: zsoltszabo2007/webby  # Or use your own webby image!
+        ports:
+        - containerPort: 80

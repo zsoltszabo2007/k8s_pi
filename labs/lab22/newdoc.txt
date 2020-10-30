@@ -1,0 +1,1 @@
+This is a new document with some content. Including this doc via a config map into nginx container

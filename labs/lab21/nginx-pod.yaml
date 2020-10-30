@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    what: what
+spec:
+  containers:
+  - name: nginx
+    image: arm32v7/nginx
+    ports:
+    - containerPort: 80
